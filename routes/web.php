@@ -14,3 +14,7 @@
 $router->get('/', function () use ($router) {
     return 'Hi';
 });
+
+$router->get('/tg', function () use ($router) {
+    return getenv('TG_TOKEN');
+});
