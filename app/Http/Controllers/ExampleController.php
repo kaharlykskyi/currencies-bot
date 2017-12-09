@@ -15,6 +15,8 @@ class ExampleController extends Controller
     {
         $bot = new Api($this->api_key);
 
+        $updates = $bot->getWebhookUpdates();
+
         $update = $bot->commandsHandler(true);
 
         // Commands handler method returns an Update object.
