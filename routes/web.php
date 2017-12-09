@@ -15,6 +15,5 @@ $router->get('/', function () use ($router) {
     return 'Hi';
 });
 
-$router->get('/tg', function () use ($router) {
-    return getenv('TG_TOKEN');
-});
+//$router->get('/set', 'ExampleController@set');
+$router->post('/hook', 'ExampleController@hook');
